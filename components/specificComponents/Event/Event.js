@@ -1,10 +1,4 @@
 ﻿import React, { Component } from "react";
-import css from "./Event.module.scss";
-import Headermenu from "../../genericComponents/Headermenu/Headermenu";
-import Hero from "../../genericComponents/Hero/Hero";
-import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
-import { RichTextToHTML } from "../../../functions/storyBlokRichTextRenderer";
-import List from "../../genericComponents/List/List";
 
 export default class Event extends Component {
 
@@ -14,24 +8,8 @@ export default class Event extends Component {
 
 	render() {
 		return (
-			<div {...storyblokEditable(this.props.blok)}>
-				<Headermenu blok={this.props.menu.content}></Headermenu>
-
-				<main>
-					<Hero blok={this.props.blok} contentTypeTag="course" />
-					<div className={css["event-page__main-content"]}>
-						<div id="event-page__short-description" key="event-page__short-description" className={css["event-page__short-description"]}>
-							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}>Event Details</h2>
-								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
-							</section>
-						</div>
-					</div>
-					{this.props.blok.additionalstuff && this.props.blok.additionalstuff.map((nestedBlok) => (
-							<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-						))}
-				</main>
-			</div>
+			<div>
+				Event:{this.props.blok.title}</div>
 		);
 
 	}
