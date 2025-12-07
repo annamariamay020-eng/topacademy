@@ -7,7 +7,8 @@ import React, { Component } from "react";
  render() {
  return (
  <div>
- Location:{this.props.blok.title}</div>
+ Food:{this.props.blok.title}</div>
  );
  }
  }
+
