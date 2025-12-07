@@ -1,0 +1,50 @@
+.food {
+  // Grundlayout
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  // Hintergrundfarbe aus Storyblok (per CSS-Variable)
+  &--colored {
+    background-color: var(--colorcode);
+  }
+
+  // TITLE
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #111;
+  }
+
+  // DESCRIPTION
+  &__description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 65ch;
+  }
+
+  // SINGLE IMAGE
+  &__image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  // MULTIPLE IMAGES (Gallery)
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  }
+}
