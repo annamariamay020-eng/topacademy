@@ -30,6 +30,7 @@ import Song from '../components/specificComponents/Song/Song';
 import StudentLife from '../components/specificComponents/StudentLife/StudentLife';
 import Event from '../components/specificComponents/Event/Event';
 import Food from '../components/specificComponents/Food/Food';
+import Nature from '../components/specificComponents/Nature/Nature';
 
 
 const components = {
@@ -56,6 +57,7 @@ const components = {
   studentlife: StudentLife,
   event: Event,
   food: Food,
+  nature: Nature,
 };
 
 storyblokInit({
