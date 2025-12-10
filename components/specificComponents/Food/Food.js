@@ -22,7 +22,6 @@ export default class Food extends Component {
 					<div className={css["location-page__main-content"]}>
 						<div id="location-page__short-description" key="location-page__short-description" className={css["location-page__short-description"]}>
 							<section className={css["rich-text-section--with-navigator"]}>
-								<h2 className={css["rich-text-section__title"]}>Food Details</h2>
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
 							</section>
 						</div>
