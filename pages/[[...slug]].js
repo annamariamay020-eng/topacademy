@@ -14,13 +14,16 @@ export default function Page({ story, preview, socialtags, menu }) {
       "product.colorcode",
       "location.colorcode",
       "food.colorcode",
+      "food.location",
       "studentlife.colorcode",
       "event.colorcode",
       "nature.colorcode",
+      "nature.location",
       "artist.songs",
       "song.artist",
       "course.teachers",
       "course.products",
+      "course.location",
       "list.elements"
     ]
   }, preview);
@@ -49,13 +52,16 @@ export async function getStaticProps({ params }) {
       "product.colorcode",
       "location.colorcode",
       "food.colorcode",
+      "food.location",
       "studentlife.colorcode",
       "event.colorcode",
       "nature.colorcode",
+      "nature.location",
       "artist.songs",
       "song.artist",
       "course.teachers",
       "course.products",
+      "course.location",
       "list.elements"
     ]
   };
