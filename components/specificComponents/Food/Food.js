@@ -25,6 +25,18 @@ export default class Food extends Component {
 								<div className={css["rich-text-section__rich-text"]}>{RichTextToHTML({ document: this.props.blok.description })}</div>
 							</section>
 						</div>
+						<div className={css["location-page__short-description"]}>
+                            <section className={css["rich-text-section--with-navigator"]}>
+                                <h2 className={css["rich-text-section__title"]}>LOCATION</h2>
+                                {this.props.blok.location && this.props.blok.location.map((loc) => (
+                                    <div key={loc.uuid} style={{ marginBottom: "8px" }}>
+                                        <a href={`/${loc.full_slug}`} style={{ color: "#cd8315", textDecoration: "underline" }}>
+                                            {loc.content.title}
+                                        </a>
+                                    </div>
+                                ))}
+                            </section>
+                        </div>
 					</div>
 					{this.props.blok.additionalstuff && this.props.blok.additionalstuff.map((nestedBlok) => (
 							<StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

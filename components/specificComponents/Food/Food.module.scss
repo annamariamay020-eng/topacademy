@@ -1,3 +1,6 @@
+@import "../../../styles/font-mixins.scss";
+@import "../../../styles/colors.scss";
+
 .food {
   // Grundlayout
   padding: 2rem;
@@ -16,7 +19,7 @@
     font-weight: 700;
     margin: 0;
     line-height: 1.2;
-    color: #111;
+    color: #333;
   }
 
   // DESCRIPTION
@@ -25,6 +28,12 @@
     color: #555;
     line-height: 1.6;
     max-width: 65ch;
+  }
+
+  &__section-title {
+    @include title-font; 
+    font-size: 1.5rem;
+    margin-top: 2rem
   }
 
   // SINGLE IMAGE
@@ -47,4 +56,7 @@
       object-fit: cover;
     }
   }
+}
+.rich-text-section__title {
+    @include title-font;
 }
