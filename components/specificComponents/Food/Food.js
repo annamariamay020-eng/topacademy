@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import css from "./Food.module.scss";
 import Headermenu from "../../genericComponents/Headermenu/Headermenu";
 import Hero from "../../genericComponents/Hero/Hero";
+import Location from "../Location/Location";
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import { RichTextToHTML } from "../../../functions/storyBlokRichTextRenderer";
 import List from "../../genericComponents/List/List";
